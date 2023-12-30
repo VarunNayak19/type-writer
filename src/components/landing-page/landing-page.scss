@@ -1,0 +1,27 @@
+.landing-page-container{
+    width: 100vw;
+    height: 100vh;
+    background: var(--Midnight-Main, #0C0C0E);
+    position: relative;
+    padding: 50px;
+
+    .title-section{
+        color: white;
+    }
+}
+.bottom-circle{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; 
+    height: 40%; 
+    background: linear-gradient(90deg, rgba(56, 162, 222, 0.05) 0.34%, rgba(0, 220, 130, 0.05) 92.9%);
+    filter: blur(30px);
+    border-top-left-radius: 50% 100%; 
+    border-top-right-radius: 50% 100%;
+
+    @media screen and (max-width:425px) {
+        height: 20% !important;
+    }
+}
