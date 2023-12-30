@@ -12,13 +12,13 @@ const LandingPage = () => {
     const navigateDummy = () => {
         navigate("/type");
     }
-    const cursor = {
-        show: true,
-        blink: true,
-        element: '|',
-        hideWhenDone: true,
-        hideWhenDoneDelay: 100,
-    }
+    // const cursor = {
+    //     show: true,
+    //     blink: true,
+    //     element: '|',
+    //     hideWhenDone: true,
+    //     hideWhenDoneDelay: 100,
+    // }
     useEffect(() => {
         const isWindows = navigator.userAgent.includes('Windows');
         const isMac = navigator.userAgent.includes('Macintosh');
@@ -40,11 +40,12 @@ const LandingPage = () => {
             <div className="test-btn" onClick={navigateDummy}>Go To Test</div>
             <div className="bottom-circle"></div>
             <div className="title-section">
-                <Typist avgTypingDelay={100}
+                {/* <Typist avgTypingDelay={100}
                     cursor={cursor}
                 >
                     <span className="title"> {textString.title} </span>
-                </Typist>
+                </Typist> */}
+                <span className="title"> {textString.title} </span>
             </div>
             <div className="description delayed-div">
                 {textString.description}
