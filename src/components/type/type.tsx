@@ -81,7 +81,7 @@ useEffect(() => {
       }
     
   return (
-      <div>
+      <div className='w-screen h-screen p-4'>
             <button className='bg-black text-white' onClick={handleStartTimer} disabled={isTimerRunning}>
                 Start
             </button>
