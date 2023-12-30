@@ -7,7 +7,7 @@ import Match from './components/match/match'
 function App() {
   // const isWindows = navigator.userAgent.includes('Windows');
 const isMac = navigator.userAgent.includes('Macintosh');
-
+alert(navigator.userAgent);
  if (isMac) {
   alert('Mac');
 } else {
