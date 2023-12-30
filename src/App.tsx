@@ -5,7 +5,14 @@ import Type from './components/type/type'
 import Match from './components/match/match'
 
 function App() {
+  // const isWindows = navigator.userAgent.includes('Windows');
+const isMac = navigator.userAgent.includes('Macintosh');
 
+ if (isMac) {
+  alert('Mac');
+} else {
+  alert('Windows');
+}
   return (
     <>
     <BrowserRouter>
