@@ -46,7 +46,7 @@
 
 .delayed-div {
     opacity: 0;
-    animation: fadeIn 0.5s ease-in-out 1s forwards;
+    animation: fadeIn 0.5s ease-in-out 1.7s forwards;
   }
   
   @keyframes fadeIn {
@@ -107,3 +107,24 @@
         top: auto;
     }
 }
+
+.title {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: typanim 3.5s steps(8, end), blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typanim {
+    from { width: 0% }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+  }

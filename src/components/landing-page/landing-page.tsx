@@ -34,7 +34,20 @@ const LandingPage = () => {
         else {
             setUser("Windows");
         }
-    }, [])
+    }, []);
+
+    const [currentText, setCurrentText] = useState('');
+    const [currentIndex, setCurrentIndex] = useState(0);
+    useEffect(() => {
+        if (currentIndex < textString.title.length) {
+          const timeout = setTimeout(() => {
+            setCurrentText(prevText => prevText + textString.title[currentIndex]);
+            setCurrentIndex(prevIndex => prevIndex + 1);
+          }, 200);
+      
+          return () => clearTimeout(timeout);
+        }
+      }, [currentIndex]);
     return (
         <div className='landing-page-container'>
             <div className="test-btn" onClick={navigateDummy}>Go To Test</div>
@@ -45,7 +58,7 @@ const LandingPage = () => {
                 >
                     <span className="title"> {textString.title} </span>
                 </Typist> */}
-                <span className="title"> {textString.title} </span>
+                <span className="title"> {currentText} </span>
             </div>
             <div className="description delayed-div">
                 {textString.description}
